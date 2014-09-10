@@ -11,7 +11,6 @@ import javax.persistence.PersistenceContext;
 
 import dansin.util.dao.intf.Dao;
 
-@Stateless
 public class DaoImpl<E> implements Dao<E> {
 
 	protected EntityManager em;
@@ -23,8 +22,8 @@ public class DaoImpl<E> implements Dao<E> {
 		ParameterizedType pt = (ParameterizedType) t;
 		type = (Class) pt.getActualTypeArguments()[0];
 		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("dansin");
-		EntityManager em = emf.createEntityManager();
+				.createEntityManagerFactory("EJBServer");
+		em = emf.createEntityManager();
 	}
 
 	public EntityManager em() {
