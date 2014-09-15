@@ -129,3 +129,9 @@ html, body {
         left: 0!important
     }
 }
+
+
+/* Override navbar bottom margin in the bootstrap */
+.navbar {
+    margin-bottom: 0px;
+}
