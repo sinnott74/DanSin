@@ -30,6 +30,7 @@ $(document).ready(
 				$('#slidemenu').toggleClass('slide-active');
 				$('#page-content, .navbar, body, .navbar-header').toggleClass(
 						'slide-active');
+				$(pagewrapper).fadeTo("fast", 0.5);
 			};
 			
 			var closeMenuAction = function(e){

@@ -6,6 +6,9 @@ body.slide-active {
 .no-margin-top {
     margin-top: 0px!important
 }
+#nav-slide {
+	background: transparent
+}
 /*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
 #page-content {
     position: relative;
@@ -17,6 +20,9 @@ html, body {
     height: 100%;
 }
 
+.navbar-default {
+	background-color: white;
+}
 /* put toggle bars on the left :: not using button */
 #slide-nav .navbar-toggle {
     cursor: pointer;
@@ -26,9 +32,8 @@ html, body {
     margin: 0;
     width: 30px;
     height: 40px;
-    padding: 10px 0 0 0;
+    padding: 10px 0 10px 0;
     border: 0;
-    background: transparent;
 }
 /* icon bar prettyup - optional */
 #slide-nav .navbar-toggle > .icon-bar {
