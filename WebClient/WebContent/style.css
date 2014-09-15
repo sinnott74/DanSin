@@ -41,7 +41,8 @@ html, body {
     background: orange
 }
 .navbar-header {
-    position: relative
+    position: relative;
+    background: white;
 }
 /* un fix the navbar when active so that all the menu items are accessible */
 .navbar.navbar-fixed-top.slide-active {
@@ -56,12 +57,13 @@ html, body {
     #slide-nav .navbar-header {
         margin: 0 auto;
         padding: 0 15px;
+        z-index: 5;
     }
     #slide-nav .navbar.slide-active {
         position: absolute;
         width: 80%;
         top: -1px;
-        z-index: 1000;
+        z-index: 2;
     }
     #slide-nav #slidemenu {
         background: #f7f7f7;
@@ -71,8 +73,8 @@ html, body {
         position: absolute;
         padding-left: 0;
         z-index: 2;
-        top: -8px;
         margin: 0;
+        border-top: 1px solid #E7E7E7;
     }
     #slide-nav #slidemenu .navbar-nav {
         min-width: 0;
@@ -102,13 +104,16 @@ html, body {
     #slide-nav.navbar-inverse #navbar-height-col {
         background: #333;
         z-index: 1;
-        border: 0;
+        border-top: 1;
+        margin: 0;
+        
     }
     #slide-nav .navbar-form {
         width: 100%;
-        margin: 8px 0;
         text-align: center;
         overflow: hidden;
+        border:0;
+        margin-top: 0px;
         /*fast clearfixer*/
     }
     #slide-nav .navbar-form .form-control {
@@ -126,7 +131,7 @@ html, body {
         position: fixed
     }
     .navbar-header {
-        left: 0!important
+        left: 0!important;
     }
 }
 

@@ -18,12 +18,14 @@ $(document).ready(
 				$('#navbar-height-col').stop().animate({
 					left : selected ? slideneg : '0px'
 				});
-				$(pagewrapper).stop().animate({
-					left : selected ? '0px' : slidewidth
-				});
-				$(navigationwrapper).stop().animate({
-					left : selected ? '0px' : slidewidth
-				});
+				$('#slidemenu').children().zIndex(100);
+				//$(pagewrapper).children().zIndex(-100);
+//				$(pagewrapper).stop().animate({
+//					left : selected ? '0px' : slidewidth
+//				});
+//				$(navigationwrapper).stop().animate({
+//					left : selected ? '0px' : slidewidth
+//				});
 				$(toggler).toggleClass('slide-active', !selected);
 				$('#slidemenu').toggleClass('slide-active');
 				$('#page-content, .navbar, body, .navbar-header').toggleClass(
