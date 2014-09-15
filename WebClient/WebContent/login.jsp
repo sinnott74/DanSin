@@ -53,7 +53,7 @@
 		</div>
 	</div>
 
-	<div id="non-navbar">
+	<div id="page-content">
 		<!-- 	breadcrumb example (its the users trail of where theyve been) -->
 		<ol class="breadcrumb text-center">
 			<li><a href="#">Top Level</a></li>
