@@ -11,7 +11,7 @@ $(document).ready(
 			var slideneg = '-80%';
 
 			var slideMenuAction = function(e) {
-				var selected = $(this).hasClass('slide-active');
+				var selected = $(toggler).hasClass('slide-active');
 				$('#slidemenu').stop().animate({
 					left : selected ? menuneg : '0px'
 				});
@@ -24,26 +24,19 @@ $(document).ready(
 				$(navigationwrapper).stop().animate({
 					left : selected ? '0px' : slidewidth
 				});
-				$(this).toggleClass('slide-active', !selected);
+				$(toggler).toggleClass('slide-active', !selected);
 				$('#slidemenu').toggleClass('slide-active');
 				$('#page-content, .navbar, body, .navbar-header').toggleClass(
 						'slide-active');
 			};
+			
+			var closeMenuAction = function(e){
+				if($(toggler).hasClass('slide-active')){
+					slideMenuAction();
+				}
+			};
 
 			$("#slide-nav").on("click", toggler, slideMenuAction);
-
-//			$(document).mouseup(function(e) {
-//				var container = $("#non-navbar");
-//
-//				if (!container.is(e.target)&&$('#slidemenu').hasClass('slide-active')) // if the target of the click isn't
-//						// the container...
-////						&& container.has(e.target).length === 0) // ... nor a
-//				// descendant
-//				// of the
-//				// container
-//				{
-//					slideMenuAction(e);
-//				}
-//			});
+			$(pagewrapper).on("click", closeMenuAction);
 
 		});

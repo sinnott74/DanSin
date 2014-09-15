@@ -10,6 +10,11 @@ body.slide-active {
 #page-content {
     position: relative;
     left: 0;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
 }
 
 /* put toggle bars on the left :: not using button */
