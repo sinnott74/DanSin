@@ -41,5 +41,17 @@ $(document).ready(
 
 			$("#slide-nav").on("click", toggler, slideMenuAction);
 			$(pagewrapper).on("click", closeMenuAction);
+			
+//			$(pagewrapper).on("swiperight",function(){
+//				  alert("You swiped right!");
+//				});
+//			
+			
+			var testPageWrapper = document.getElementById('page-content');
+			var mc = new Hammer(testPageWrapper);
+			mc.on("swiperight", function(ev) {
+//				testPageWrapper.textContent = ev.type +" gesture detected.";
+				slideMenuAction();
+			});
 
 		});
