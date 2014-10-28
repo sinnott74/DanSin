@@ -15,9 +15,6 @@ $(document).ready(
 				$('#slidemenu').stop().animate({
 					left : selected ? menuneg : '0px'
 				});
-				$('#navbar-height-col').stop().animate({
-					left : selected ? slideneg : '0px'
-				});
 				$('#slidemenu').children().zIndex(100);
 				//$(pagewrapper).children().zIndex(-100);
 //				$(pagewrapper).stop().animate({
