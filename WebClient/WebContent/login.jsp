@@ -19,6 +19,8 @@
 <sj:head loadFromGoogle="true" />
 <script src='slide-menu.js'></script>
 <link href="style.css" rel="stylesheet">
+<!-- Adds android app support -->
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 	<div class="navbar navbar-default" role="navigation" id="slide-nav">
