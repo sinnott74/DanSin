@@ -8,7 +8,7 @@ $(document).ready(
 				var selected = $(toggler).hasClass('slide-active');
 				$('#slidemenu').stop().animate({
 					left : selected ? menuneg : '0px'
-				});
+				}, 200);
 				$('#slidemenu').children().zIndex(100);
 
 				$(toggler).toggleClass('slide-active', !selected);
