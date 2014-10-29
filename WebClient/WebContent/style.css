@@ -101,7 +101,7 @@ html,body {
 		white-space: normal;
 	}
 	#slide-nav {
-		border-top: 0;
+		border: 0;
 		height: 100%;
 	}
 	#slide-nav.navbar-inverse #slidemenu {
@@ -124,7 +124,7 @@ html,body {
 	#page-content {
 		position: absolute;
 		left: 0px;
-		height: 100%;
+		height: calc(100% - 50px);
 		top: 50px;
 		width: 100%;
 	}
