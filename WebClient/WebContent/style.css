@@ -57,6 +57,13 @@ html,body {
 .navbar.navbar-fixed-top.slide-active {
 	position: relative
 }
+
+#loginForm {
+	padding: 2%;
+	margin: 2%;
+	background-color: #E7E7E7;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media ( max-width :767px) {
 	#slide-nav .container {
@@ -77,7 +84,7 @@ html,body {
 		position: absolute;
 		width: 80%;
 		top: -1px;
-		z-index: 3;
+		z-index: 2;
 	}
 	#slide-nav #slidemenu {
 		background: #f7f7f7;
@@ -91,6 +98,7 @@ html,body {
 		margin: 0;
 		border-top: 1px solid #E7E7E7;
 		background: #eee;
+		box-shadow: 3px 7px 12px -3px #000;
 	}
 	#slide-nav #slidemenu .navbar-nav {
 		min-width: 0;
@@ -126,7 +134,7 @@ html,body {
 	#page-content {
 		position: absolute;
 		left: 0px;
-/* 		height: calc(100% - 50px); */
+		/* 		height: calc(100% - 50px); */
 		top: 50px;
 		width: 100%;
 	}
