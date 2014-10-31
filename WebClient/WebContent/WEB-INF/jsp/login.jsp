@@ -10,9 +10,16 @@
 
 	<div class="container">
 		<div id="loginForm" class="vertical-center">
+			<!-- form errors -->
 			<s:if test="hasActionErrors()">
 				<div class="errors">
 					<s:actionerror theme="bootstrap" />
+				</div>
+			</s:if>
+			<!-- form messages -->
+			<s:if test="hasActionMessages()">
+				<div class="welcome">
+					<s:actionmessage />
 				</div>
 			</s:if>
 			<s:form action="login" validate="true" theme="bootstrap"
