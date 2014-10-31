@@ -13,6 +13,7 @@
 			method="execute">
 			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
+			<result name="input">/TestTemplate.jsp</result>
 		</action>
 		
 		<action name="test" class="dansin.test.struts.TestAction"
