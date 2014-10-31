@@ -62,7 +62,13 @@ html,body {
 	padding: 2%;
 	margin: 2%;
 	background-color: #E7E7E7;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	border-radius: 10px;
+}
+
+/*Form error messages*/
+.alert-danger{
+	background-color: transparent;
 }
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media ( max-width :767px) {
