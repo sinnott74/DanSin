@@ -2,6 +2,7 @@ package dansin.login;
 
 import java.util.Properties;
 
+import javax.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -13,6 +14,7 @@ import dansin.facade.authenticate.LoginFacadeRemoteIntf;
 
 public class LoginAction extends ActionSupport implements Preparable {
 
+	@EJB(mappedName="dansin.facade.authenticate.LoginFacade")
 	LoginFacadeRemoteIntf loginFacade;
 	String username;
 	String password;
@@ -30,7 +32,7 @@ public class LoginAction extends ActionSupport implements Preparable {
 
 	@Override
 	public void prepare() throws Exception {
-		getEJB();
+		//getEJB();
 	}
 
 	@Override

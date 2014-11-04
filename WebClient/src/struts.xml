@@ -2,22 +2,33 @@
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
    "http://struts.apache.org/dtds/struts-2.0.dtd">
-		
+
 <struts>
 	<constant name="struts.action.extension" value="," />
 	<constant name="struts.devMode" value="true" />
 
 	<package name="login" namespace="/" extends="struts-default">
 
-		<action name="login" class="dansin.login.LoginAction"
-			method="execute">
+		<interceptors>
+			<interceptor name="EJB"
+				class="dansin.interceptors.ejb.EJBInterceptor">
+<!-- 				<param name="context">java:global,java:app,java:global/openbooks-web</param> -->
+				<param name="debug">true</param>
+			</interceptor>
+		</interceptors>
+
+		<action name="login" class="dansin.login.LoginAction" method="execute">
+			<interceptor-ref name="EJB" />
+			<interceptor-ref name="defaultStack" />
 			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
 			<result name="input">/TestTemplate.jsp</result>
 		</action>
-		
+
 		<action name="test" class="dansin.test.struts.TestAction"
 			method="TestGuice">
+			<interceptor-ref name="EJB" />
+			<interceptor-ref name="defaultStack" />
 			<result name="success">success.jsp</result>
 			<result name="error">login.jsp</result>
 		</action>
